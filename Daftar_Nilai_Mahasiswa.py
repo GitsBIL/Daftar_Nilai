@@ -1,7 +1,5 @@
-# List untuk menyimpan data mahasiswa
 data_mahasiswa = []
 
-# Fungsi untuk menambahkan data mahasiswa
 def tambah():
     nama = input("Masukkan Nama Mahasiswa: ")
     tugas = float(input("Masukkan Nilai Tugas: "))
@@ -16,7 +14,6 @@ def tambah():
     })
     print("Data berhasil ditambahkan!")
 
-# Fungsi untuk menampilkan data mahasiswa
 def tampilkan():
     if not data_mahasiswa:
         print("Belum ada data mahasiswa.")
@@ -29,7 +26,6 @@ def tampilkan():
         print(f"| {mahasiswa['Nama']:^15} | {mahasiswa['Tugas']:^5} | {mahasiswa['UTS']:^5} | {mahasiswa['UAS']:^5} | {mahasiswa['Nilai Akhir']:^7.2f} |")
     print("="*77)
 
-# Fungsi untuk menghapus data mahasiswa berdasarkan nama
 def hapus(nama):
     for mahasiswa in data_mahasiswa:
         if mahasiswa["Nama"].lower() == nama.lower():
@@ -38,7 +34,6 @@ def hapus(nama):
             return
     print(f"Data mahasiswa dengan nama {nama} tidak ditemukan.")
 
-# Fungsi untuk mengubah data mahasiswa berdasarkan nama
 def ubah(nama):
     for mahasiswa in data_mahasiswa:
         if mahasiswa["Nama"].lower() == nama.lower():
@@ -51,7 +46,6 @@ def ubah(nama):
             return
     print(f"Data mahasiswa dengan nama {nama} tidak ditemukan.")
 
-# Menu utama
 while True:
     print("\nMenu:")
     print("[T]ambah, [L]ihat, [U]bah, [H]apus, [K]eluar")
